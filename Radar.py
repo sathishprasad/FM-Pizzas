@@ -53,7 +53,7 @@ def dataprep(option1):
 
 def Pizzaapp(data,league,pos,Club):
     st.title("Pizza plots")
-    st.markdown("Choose appropriate filters from the menu bar on your left hand side. Click **'Generate pizza plot'** \nto produce plots. All the data used is **percentile values** calculated for player within \nhis league and within the players position position. **50th percentile is the league median** \nof selected players position. Have fun!")
+    st.markdown("Choose appropriate filters from the menu bar on your left hand side. Click **'Generate pizza plot'** to generate plots.")
             
     
     
