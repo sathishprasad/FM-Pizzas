@@ -602,7 +602,7 @@ def singlepizza(data,league,pos,Club):
 
 def goto():
     option1 = 'Men'
-    cols = ['TFA','SS','BFM','Minnesota','Avid','Game Changer FA']
+    cols = ['TFA','SS','BFM','Minnesota','Avid','Game Changer FA','IMAD']
     template = st.sidebar.selectbox("Select colour template",cols)
     if template == 'TFA':
         st.session_state['template'] = 'TFA'
@@ -696,6 +696,19 @@ def goto():
         st.session_state['R1'] = st.session_state['h1']
         st.session_state['R2'] = '#cccccc'
         st.session_state['bg2'] = '#171414'
+    elif template == 'IMAD':
+        st.session_state['template'] = 'IMAD'
+        st.session_state['bg'] = '#14243b'
+        st.session_state['text'] = '#ffffff'
+        st.session_state['h1'] = '#f4d450'
+        st.session_state['h2'] = '#ff5e57'
+        st.session_state['h3'] = '#f73c93'
+        st.session_state['c'] = st.session_state['h2']
+        st.session_state['b'] = 'white'
+        path = "PPTelegrafUltraBold.otf"
+        st.session_state['font_normal2'] = FontProperties(fname=path)
+        path1 = "PPTelegrafRegular.otf"
+        st.session_state['font_normal1'] = FontProperties(fname=path1)
 
     
     dataprep(option1)
