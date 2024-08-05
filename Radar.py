@@ -168,6 +168,10 @@ def mental(data,col1,label,value):
     elif st.session_state['template'] == 'Game Changer FA':
         fdj_cropped = Image.open('gcfc.png')
         ax_image = add_image(fdj_cropped, fig, left=0.4598, bottom=0.4450, width=0.10, height=0.095)
+    elif st.session_state['template'] == 'Virtual Scout':
+        fdj_cropped = Image.open('Virtual-Scout-White.png')
+        ax_image = add_image(
+        fdj_cropped, fig, left=0.4578, bottom=0.4315, width=0.11, height=0.127)
 
     #ax_image = add_image(
     #fdj_cropped, fig, left=0.4478, bottom=0.4315, width=0.13, height=0.127)
@@ -249,6 +253,9 @@ def genradar(data,col1,label,value1,value2):
     elif st.session_state['template'] == 'Game Changer FA':
                     fdj_cropped = Image.open('gcfc.png')
                     ax_image = add_image(fdj_cropped, attacking, left=0.6358, bottom=0.0795, width=0.06, height=0.06)
+    elif st.session_state['template'] == 'Virtual Scout':
+        fdj_cropped = Image.open('Virtual-Scout-White.png')
+        ax_image = add_image(fdj_cropped, attacking, left=0.6258, bottom=0.0795,width=0.06, height=0.06)
 
 
 
@@ -602,7 +609,7 @@ def singlepizza(data,league,pos,Club):
 
 def goto():
     option1 = 'Men'
-    cols = ['TFA','SS','BFM','Minnesota','Avid','Game Changer FA','IMAD']
+    cols = ['TFA','Virtual Scout','SS','BFM','Minnesota','Avid','Game Changer FA','IMAD']
     template = st.sidebar.selectbox("Select colour template",cols)
     if template == 'TFA':
         st.session_state['template'] = 'TFA'
@@ -709,6 +716,21 @@ def goto():
         st.session_state['font_normal2'] = FontProperties(fname=path)
         path1 = "PPTelegrafRegular.otf"
         st.session_state['font_normal1'] = FontProperties(fname=path1)
+    elif template == 'Virtual Scout':
+        st.session_state['template'] = 'Virtual Scout'
+        st.session_state['bg'] = '#171516'
+        st.session_state['bg2'] = '#140f0f'
+        st.session_state['text'] = '#ffffff'
+        st.session_state['h1'] = '#f2e806'
+        st.session_state['h2'] = '#f73c93'
+        st.session_state['h3'] = '#FFFFFF'
+        st.session_state['c'] = '#171616'
+        st.session_state['b'] = 'white'
+        path = "PPTelegrafUltraBold.otf"
+        st.session_state['font_normal2'] = FontProperties(fname=path)
+        path1 = "PPTelegrafRegular.otf"
+        st.session_state['font_normal1'] = FontProperties(fname=path1)
+
 
     
     dataprep(option1)
